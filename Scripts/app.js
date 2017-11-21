@@ -1,3 +1,14 @@
+var red = "#EB9282", orange = "#EBC382", blue = "#5B779A", green = "#5FAC79";
+
+var red1 = "#B55E6A", red2 = "#E37F8D", red3 = "#F77B8C";
+var orange1 = "#BE9163", orange2 = "#EFBB86", orange3 = "#FFC07F";
+var blue1 = "#3F6A76", blue2 = "#558795", blue3 = "#63ACC0";
+var green1 = "#66A154", green2 = "#87CB71", green3 = "#8EE673";
+
+var colors = ["#B55E6A", "#E37F8D", "#F77B8C", "#BE9163",
+            "#EFBB86", "#FFC07F", "#3F6A76", "#558795", 
+            "#63ACC0", "#66A154", "#87CB71", "#8EE673"];
+
 function fillCanvas(){
     var canvas = document.getElementById('canvas');
     if (canvas.getContext) {
@@ -6,6 +17,7 @@ function fillCanvas(){
         // ctx.fillRect(0, 0, canvas.width, canvas.height);    
     }
 }
+
 function clearCanvas(){
     var canvas = document.getElementById('canvas');
     if (canvas.getContext) {
@@ -40,65 +52,77 @@ function draw(x, y, num, type) {
         var rowNum = num - 1;
 
 
+        var rand = Math.floor(Math.random() * 11);        
+        var color = colors[rand];
+
         if(num <= 9) {
             // Top first part of hex
             rowX += ( rowNum * triangleHalfSideLength ) + offset1;
             if(num % 2 == 0) {
-                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type);            
+                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type, color);            
             } else {
-                drawTriangle(ctx, triangleSideLength, rowX, rowY, type);
+                drawTriangle(ctx, triangleSideLength, rowX, rowY, type, color);
             }
         } else if(num <= 20) {
             // Top second part of hex
             rowX += ((rowNum - 9) * triangleHalfSideLength) + offset2; 
             rowY += triangleSideLength;
+
             if(num % 2 != 0) {
-                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type);            
+                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type, color);            
             } else {
-                drawTriangle(ctx, triangleSideLength, rowX, rowY, type);
+                drawTriangle(ctx, triangleSideLength, rowX, rowY, type, color);
             }
         } else if(num <= 33) {
             // Top third part of hex
             rowX += (rowNum - 20) * triangleHalfSideLength;
             rowY += triangleSideLength * 2;
+
+
             if(num % 2 == 0) { 
-                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type);            
+                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type, color);            
             } else {
-                drawTriangle(ctx, triangleSideLength, rowX, rowY, type);
+                drawTriangle(ctx, triangleSideLength, rowX, rowY, type, color);
             }
         } else if(num <= 46) {
             // Middle bottom part of hex
             rowX += (rowNum - 33) * triangleHalfSideLength;
             rowY += triangleSideLength * 3;
+
+
             if(num %2 != 0) {
-                drawTriangle(ctx, triangleSideLength, rowX, rowY, type);
+                drawTriangle(ctx, triangleSideLength, rowX, rowY, type, color);
             } else {
-                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type);            
+                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type, color);            
             }
         } else if(num <= 57) {
             // Middle bottom part of hex
             rowX += ((rowNum - 46) * triangleHalfSideLength) + offset2;
             rowY += triangleSideLength * 4;
+
+
             if(num % 2 == 0) {
-                drawTriangle(ctx, triangleSideLength, rowX, rowY, type);
+                drawTriangle(ctx, triangleSideLength, rowX, rowY, type, color);
             } else{
-                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type);            
+                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type, color);            
             }
         } else{
             // Bottom part of hex
             rowX += ((rowNum - 57) * triangleHalfSideLength) + offset1;
             rowY += triangleSideLength * 5;
+
+            
             if(num %2 != 0) {
-                drawTriangle(ctx, triangleSideLength, rowX, rowY, type);
+                drawTriangle(ctx, triangleSideLength, rowX, rowY, type, color);
             } else {
-                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type); 
+                drawTriangleInvert(ctx, triangleSideLength, rowX, rowY, type, color); 
             }
         }
     }
 }
 
 // function to draw /\ triangle,
-function drawTriangle(ctx, side, x, y, type){
+function drawTriangle(ctx, side, x, y, type, color){
     if(type==0){
         ctx.globalCompositeOperation='source-over';
     } else{        
@@ -112,14 +136,14 @@ function drawTriangle(ctx, side, x, y, type){
     ctx.lineTo(x + side, y + side);
     // line to top
     ctx.lineTo(x + (side / 2), y);
-        ctx.fillStyle="white";        
     
+    ctx.fillStyle=color;        
     ctx.fill();
     ctx.closePath();
 }
 
 // function to draw \/ triangle
-function drawTriangleInvert(ctx, side, x, y, type){
+function drawTriangleInvert(ctx, side, x, y, type, color){
     if(type==0){
         ctx.globalCompositeOperation='source-over';
     } else{        
@@ -134,7 +158,7 @@ function drawTriangleInvert(ctx, side, x, y, type){
     // line to bottom
     ctx.lineTo(x + (side / 2), y + side);
     
-    ctx.fillStyle="white";        
+    ctx.fillStyle=color;        
     
     ctx.fill();
     ctx.closePath();
@@ -228,8 +252,9 @@ app.factory('userService', ['$rootScope', function ($rootScope, $interval) {
             // Store how much points user have
             model: {
                 zenny: 0,
-                sim: 0,
+                sim: 2,
                 house : 0,
+                farm: 0,
                 hamlet : 0,
                 village : 0,
                 town : 0,
@@ -241,7 +266,7 @@ app.factory('userService', ['$rootScope', function ($rootScope, $interval) {
     
             // Store how much (base) points is added per second
             basePointsPerSecond: {
-                zenny: 0,
+                zenny: 0.1,
                 sim: 1,
                 house : 0,
                 hamlet : 0,
@@ -255,9 +280,9 @@ app.factory('userService', ['$rootScope', function ($rootScope, $interval) {
 
             // Store modifier for points per second
             modifier: {
-                zenny: 0,
+                zenny: 1,
                 sim: 1,
-                house : 0,
+                house : 1,
                 hamlet : 0,
                 village : 0,
                 town : 0,
@@ -269,6 +294,7 @@ app.factory('userService', ['$rootScope', function ($rootScope, $interval) {
 
             UpdateModel: function(){
                 service.model.sim += (service.basePointsPerSecond.sim * service.modifier.sim) * 0.017;
+                service.model.zenny += ((service.basePointsPerSecond.zenny * service.model.sim) * service.modifier.zenny) * 0.017;
                 //console.log("tick");
             },
 
@@ -288,6 +314,11 @@ app.factory('userService', ['$rootScope', function ($rootScope, $interval) {
 
             GetBirthRate: function(){
                 return (service.basePointsPerSecond.sim * service.modifier.sim);
+            },
+
+            GetZennyRate: function(){
+                return (service.basePointsPerSecond.zenny * service.model.sim) * service.modifier.zenny;
+                
             },
 
             SaveState: function () {
@@ -343,11 +374,12 @@ app.controller('houseController', function(userService, ModelInterval, GridLocat
 
         // To be added. birth and death rate
         $scope.birthRate = userService.GetBirthRate();
-    
         $scope.simRate = userService.GetSimRate();
-
+        $scope.zennyRate = userService.GetZennyRate();
+        
         if($route.current.originalPath == "/"){
             $scope.house = userService.model.house;        
+            $scope.farm = userService.model.farm;        
         } else if($route.current.originalPath == "/hamlet"){
             $scope.hamlet = userService.model.hamlet;        
         }else if($route.current.originalPath == "/village"){
@@ -367,7 +399,7 @@ app.controller('houseController', function(userService, ModelInterval, GridLocat
 
     $scope.test = function(){
         return 1;
-    }
+    };
 
     // checkGrid function checks the current page triangles
     // with the data. 
@@ -377,6 +409,11 @@ app.controller('houseController', function(userService, ModelInterval, GridLocat
             return;
         }
         
+        // Return if page is full
+        if(pageTriangles > 2900){
+            return;
+        }
+
         // Count the difference page's triangles with the data
         var diff = Math.floor($scope.sim) - pageTriangles;
 

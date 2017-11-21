@@ -21,7 +21,7 @@ body{
 #canvas{
     display: block;
     float:left;
-    background-color : black;
+    background-color : #535353;
 }
 
 #panel-container{
@@ -60,4 +60,8 @@ h2{
 .grey{
     font-size: 14px;
     color: grey;
+}
+
+.add-info{
+    font-size:14px;
 }
