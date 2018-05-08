@@ -1,0 +1,202 @@
+body{
+    background-color: #F6F3EE;
+}
+
+@font-face{
+    font-family: GeoSansLight;
+    src: url("style/GeosansLight.ttf")
+}
+
+#main-header{
+    /* background-image:  url("bg.png"); 
+    background-repeat: no-repeat;
+    background-position: left center; */
+    /* background-size: auto; */
+    /* background-size: cover; */
+    /* background-color: #000; */
+    width: inherit;
+    height: 100vh;
+    position: relative;
+}
+
+#header-bg{
+    width:100vw;
+    position: absolute;
+}
+
+.name-title{
+    font-size: 65px;
+    display: inherit;
+}
+
+.job-title{
+    font-size: 45px;
+    display: inherit;
+}
+
+.filler{
+    height: 30%;
+    width: inherit;
+}
+
+.fixed{
+    height: 100px;
+}
+
+.between-content{
+    height: 100px;
+}
+
+.trigger{
+    height:0px;
+    width:0px;
+}
+
+.pinned-guide{
+    display: flex;
+}
+
+.content{
+    height: 100vh;
+    padding: 10% 10%;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+.content_1{
+    padding: 15% 10%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.zap{
+    opacity: 1;
+}
+
+#title-div{
+    text-align: center;
+    font-family: "GeoSansLight";
+    font-size: 80px;
+    background: #000;
+    color: white;
+    height: 40%;
+}
+
+
+#slide {
+    text-align: center;
+    font-family: "GeoSansLight";
+    font-size: 80px;
+    background: #000;
+    color: white;
+    width: 100vw;
+    height: 40vh;
+    left: -100vw;
+    position: absolute;
+    display:block;
+    margin: 30vh 0%;    
+    padding: 2% 0;
+
+  -webkit-animation: slide-left 1s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide-left 1s forwards;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes slide-left {
+    100% { left: 0; }
+}
+
+@keyframes slide-left {
+    100% { left: 0; }
+}
+
+
+body {
+	background-color:#bccbcf;
+	color:#555;
+	font:normal 1em Arial,sans-serif;
+	margin:auto;
+	height:auto;
+}
+
+#gx {
+	background-size:contain;
+	text-align:center;
+	width:100%;
+	height:auto;
+}
+
+#bg-wrapper{
+	stroke: #919499;
+}
+
+.fill{
+	fill: white;
+}
+
+
+#gx-logo {
+}
+
+.pow{
+}
+
+.big{
+	stroke-width: 2;
+}
+
+.big-1 {
+    stroke-dasharray: 100 1000;
+	stroke-dashoffset: -220;
+}
+
+.big-2 {
+    stroke-dasharray: 250 1000;
+	stroke-dashoffset: -100;
+}
+
+#bg-anim {
+	stroke:#fff;
+}
+
+.anim-1{
+    stroke-dasharray: 5 1000;
+    animation: dash-1 8s linear infinite;
+    /* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+.anim-2{
+    stroke-dasharray: 5 1100;
+    animation: dash-2 14s linear infinite;
+	/* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+.anim-3{
+    stroke-dasharray: 5 1000;
+    animation: dash-3 3s linear infinite;
+	/* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+.anim-4{
+    stroke-dasharray: 5 1000;
+	animation: dash-1 6s linear infinite;
+	/* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+
+@keyframes dash-1 {
+	to {stroke-dashoffset: -900;}
+}@keyframes dash-2 {
+	to {stroke-dashoffset: 1100;}
+}@keyframes dash-3 {
+	to {stroke-dashoffset: -500;}
+}
+
+.non-anim{
+	stroke:#fff;
+}
