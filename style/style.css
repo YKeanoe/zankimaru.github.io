@@ -1,5 +1,9 @@
-body{
+body {
     background-color: #F6F3EE;
+	color:#555;
+	font:normal 1em Arial,sans-serif;
+	margin:auto;
+	height:auto;
 }
 
 @font-face{
@@ -116,13 +120,7 @@ body{
 }
 
 
-body {
-	background-color:#bccbcf;
-	color:#555;
-	font:normal 1em Arial,sans-serif;
-	margin:auto;
-	height:auto;
-}
+
 
 #gx {
 	background-size:contain;
