@@ -1,0 +1,139 @@
+<div id="page-body" class="container-fluid">
+    <div id="trigger_1" class="trigger"></div>        
+
+    <div class="content dark-content half-content animation1" id="content_1">
+        <div class="row justify-content-center align-items-center mh-inherit ">
+            <div class="col-xs-12 col-md-8">
+                <p class="h1 text-center">
+                    Hi, I'm Yohanes and I am a full stack software developer. From cloud server to back-end to front-end, take your pick.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="trigger_2" class="trigger"></div>        
+
+    <div class="content three-fourth-content x-content animation1" id="content_2">
+        <div class="row justify-content-center align-items-center align-self-center mh-inherit">
+            <div class="col-xs-12 col-md-6 table-bg">
+                <table class="table skill-table">
+                    <thead>
+                        <tr class="d-flex">
+                            <th class="col-12" colspan="3">
+                                <p class="h1 text-center">
+                                    Things I do
+                                </p>
+                            </th>
+                        </tr>
+                        <tr class="d-flex">
+                            <th class="col-4"><span class="fa fa-cogs fa-4x skill-icon"></span></th>
+                            <th class="col-4"><span class="fa fa-code fa-4x skill-icon"></span></th>
+                            <th class="col-4"><span class="fa fa-desktop fa-4x skill-icon"></span></th>
+                        </tr>
+                        <tr class="d-flex">
+                            <td class="col-4"><b>Database and Web Server</b></td>
+                            <td class="col-4"><b>Back-end</b></td>
+                            <td class="col-4"><b>Front-end</b></td>
+                        </tr>
+                    </thead>
+                    <tbody>                                
+                        <tr class="d-flex">
+                            <td class="col-4">SQL</td>
+                            <td class="col-4">Java</td>
+                            <td class="col-4">HTML/CSS</td>
+                        </tr>
+                        <tr class="d-flex">
+                            <td class="col-4">AWS</td>
+                            <td class="col-4">C#</td>
+                            <td class="col-4">Javascript</td>
+                        </tr>
+                        <tr class="d-flex">
+                            <td class="col-4">Apache</td>
+                            <td class="col-4">Python</td>
+                            <td class="col-4">ASP.NET</td>
+                        </tr>
+                        <tr class="d-flex">
+                            <td class="col-4">MongoDB</td>
+                            <td class="col-4">PHP</td>
+                            <td class="col-4">Java Swing Applet</td>
+                        </tr>
+                        <tr class="d-flex">
+                            <td class="col-4">Oracle</td>
+                            <td class="col-4">Objective C</td>
+                            <td class="col-4"></td>
+                        </tr>
+                        <tr class="d-flex">
+                            <td class="col-4"></td>
+                            <td class="col-4">Node.js</td>
+                            <td class="col-4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="trigger_3" class="trigger"></div>        
+
+    <div class="content dark-content one-third-content animation1 p-5 d-flex align-items-center" id="content_3">
+        <div class="w-100 hide">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-12 col-md-8">
+                    <p class="h1 text-center">
+                        Contact me or see my previous works bellow.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center mt-4">
+                <div class="col-8 d-none d-md-block">
+                    <div class="row">
+                        <a href="mailto:keanuraharjo@hotmail.com" class="col-4">
+                            <p class="h4 text-center">
+                                <span class="fas fa-envelope fa-2x"></span>
+                                <br/>
+                                <br/>
+                                keanuraharjo@hotmail.com
+                            </p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ykeanoe" class="col-4">
+                            <p class="h4 text-center">
+                                <span class="fab fa-linkedin fa-2x"></span>
+                                <br/>
+                                <br/>
+                                ykeanoe
+                            </p>
+                        </a>
+                        <a href="https://www.github.com/ZankiMaru" class="col-4">
+                            <p class="h4 text-center">
+                                <span class="fab fa-github-square fa-2x"></span>
+                                <br/>
+                                <br/>
+                                ZankiMaru
+                            </p>                    
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 justify-content-center d-flex d-md-none">
+                    <div class="row col-10">
+                        <a href="mailto:keanuraharjo@hotmail.com" class="col-12">
+                            <p class="h4 text-left">
+                                <span class="fas fa-envelope-square fa-2x"></span>&emsp;keanuraharjo@hotmail.com
+                            </p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ykeanoe" class="col-12">
+                            <p class="h4 text-left">
+                                <span class="fab fa-linkedin fa-2x"></span>&emsp;ykeanoe
+                            </p>
+                        </a>
+                        <a href="https://www.github.com/ZankiMaru" class="col-12">
+                            <p class="h4 text-left">
+                                <span class="fab fa-github-square fa-2x"></span>&emsp;ZankiMaru
+                            </p>                    
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trigger_header" class="trigger"></div>

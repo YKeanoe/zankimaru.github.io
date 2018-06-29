@@ -1,0 +1,28 @@
+<div id="header-link" class="container-fluid">
+    <div class="row justify-content-center align-items-center mt-3">
+        <div class="col-8">
+            <div class="row">
+                <a href="mailto:keanuraharjo@hotmail.com" class="col-3">
+                    <p class="text-center">
+                        <span class="fas fa-envelope fa-2x"></span>
+                    </p>
+                </a>
+                <a href="https://www.linkedin.com/in/ykeanoe" class="col-3">
+                    <p class="text-center">
+                        <span class="fab fa-linkedin fa-2x"></span>
+                    </p>
+                </a>
+                <a href="https://www.github.com/ZankiMaru" class="col-3">
+                    <p class="text-center">
+                        <span class="fab fa-github-square fa-2x"></span>
+                    </p>                    
+                </a>
+                <a href="" id="scroll-top" class="col-3">
+                    <p class="text-center">
+                        <span class="fas fa-chevron-circle-up fa-2x"></span>
+                    </p>                    
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

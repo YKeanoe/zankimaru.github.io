@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Import third-party libraries -->
+    <script src="/vendors/jquery/jquery-3.2.1.min.js"></script>        
+    <script src="/vendors/popper/popper.min.js"></script>
+    <script src="/vendors/bootstrap-4.0.0/js/bootstrap.min.js"></script>        
+    <script src="/vendors/angularjs-1.6.6/angular.min.js"></script>        
+    <script src="/vendors/angularjs-1.6.6/angular-route.min.js"></script>        
+    <script src="/vendors/angularjs-1.6.6/angular-resource.min.js"></script>        
+    <script src="/vendors/ifvisible.js/ifvisible.min.js"></script>
+    <script src="/vendors/infinite-scroll/infinite-scroll.pkgd.min.js"></script>
+    <script defer src="/vendors/fontawesome-5.0.4/js/fontawesome-all.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>        
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/jquery.ScrollMagic.js"></script>
+    
+    <!-- Import app -->
+    <script src="/src/js/scroll.js"></script>
+    <!-- Import stylesheet -->
+    <link rel="stylesheet" href="vendors/bootstrap-4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css"/>
+
+    <title>Yohanes</title>
+</head>

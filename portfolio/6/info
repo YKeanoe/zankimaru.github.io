@@ -1,0 +1,2 @@
+First year project for RMIT Web Programming. We are required to develop a webpage for 'silverado', a movie theater. Using php, the webpage is able to grab the data from another server's API and display it. The webpage will then be able to calculate the prices and post a form to the server for a check and verify. Unfortunately, RMIT's server for the data/API is no longer available, hence the green screen.
+
