@@ -56,7 +56,7 @@ body {
 
     color: #303133;
     width: 100vw;
-    height: 20vh;
+    height: 40vh;
     left: -100vw;
     position: absolute;
     /* display: block; */
@@ -83,14 +83,14 @@ body {
 }
 
 .name-title{
-    font-size: 2em;
+    font-size: 4em;
     font-weight: bold;
     display: inherit;
 }
 
 .job-title{
     margin-top: 1%;
-    font-size: 1.3em;
+    font-size: 2.8em;
     display: inherit;
 }
 
@@ -124,21 +124,6 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
-#content_1 p{
-    font-size: 1em;
-}
-
-#content_2 p{
-    font-size: 2em;
-}
-
-#content_3 p.h1{
-    font-size: 2em;
-}
-#content_3 a p.h4{
-    font-size: 1.1em;
-}
-
 .light-content{
     background: #F6F3EE;
     /* background: linear-gradient(to right, rgba(246, 243, 238, 1), rgba(246, 243, 238, 0)); */
@@ -164,10 +149,6 @@ body {
 }
 #content_footer a:hover{
     color: #aaa;
-}
-
-#content_footer p.h4{
-    font-size: 1em;
 }
 
 .darker-content{
@@ -287,7 +268,7 @@ body {
     /* color: #333; */
     color: #333;
     /* filter: drop-shadow(-1px -1px 0 #333) drop-shadow(1px 1px 0 #333) drop-shadow(1px -1px 0 #333) drop-shadow(-1px 1px 0 #333);   */
-    font-size: 2em;
+    font-size: 3.5em;
 }
 
 .hide{
@@ -301,7 +282,7 @@ body {
 
 .portfolio-showcase-wrapper{
     /* height: 40%; */
-    flex: 0 1 100%;
+    flex: 0 1 48%;
 
     overflow: hidden;
     padding: 0%;
@@ -316,13 +297,8 @@ body {
     transform: scale(1.1);
 }
 
-.modal-header{
-    padding: 0;
-    align-items: center;
-}
-
 .modal-body{
-    padding: 0;
+    padding: 0 15px 0 15px;
 }
 
 .modal-body > .row{
@@ -333,16 +309,6 @@ body {
     margin: 0;
     padding: 0;
 } 
-
-.modal-next, .modal-prev{
-    font-size: 2em;
-}
-
-.modal-button{
-    height: 100%;
-    width: 100%;
-    padding: 0;
-}
 
 .small-showcase{
     width: 100%;
@@ -373,16 +339,13 @@ body {
     height: 100%;
 }
 
-.long-text, .medium-text, .short-text{
-    font-size: 1em;
-}
-
-.portfolio p.h1{
-    font-size: 2em;
+.modal-button{
+    height: 100%;
+    width: 100%;
 }
 
 .portfolio-detail{
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .portfolio{
@@ -401,7 +364,7 @@ body {
 }
 
 .portfolio-left > ul{
-    direction: initial;
+    direction: rtl;
 }
 
 .swipe-left{
@@ -449,7 +412,7 @@ body {
     z-index: 1;
     background-color: #333;
     transition: 0.5s;
-    top: -30vh;
+    top: -10vh;
     color: white;
 }
 
@@ -594,32 +557,30 @@ a:hover{
 }
 
 .portfolio .port-flex{
-    flex-direction: column-reverse;
+    flex-direction: row;
 }
 .portfolio:nth-of-type(n+9):nth-of-type(4n+1) .port-flex{
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
 }
 
-.text-right{
-    text-align: left !important;
-}
 
-@media screen and (min-width: 420px) {
-    #content_3 a p.h4{
-        font-size: 1.5em;
-    }
-    .short-text{
-        font-size: 1.5em;
-    }
-    .modal-next, .modal-prev{
-        font-size: 2em;
+@media screen and (max-width: 1200px) {
+    .portfolio-showcase-wrapper{
+        height: 30%;
     }
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1025px) {
+    .portfolio-showcase-wrapper{
+        height: initial;
+        flex: 0 1 100%;
+    }   
+}
+
+@media screen and (max-width: 770px) {
     #slide{
-        height: 40vh;
+        height: 20vh;
     }
     .name-title{
         font-size: 2.8em;
@@ -628,66 +589,46 @@ a:hover{
         font-size: 1.6em;
     }
     .text-right{
-        text-align: right !important;
+        text-align: left !important;
     }
     .portfolio-left > ul{
-        direction: rtl;
+        direction: initial;
     }
     .portfolio .port-flex{
-        flex-direction: row;
+        flex-direction: column-reverse;
     }
     .portfolio:nth-of-type(n+9):nth-of-type(4n+1) .port-flex{
-        flex-direction: row-reverse;
-    }
-    .medium-text{
-        font-size: 1.5em;
+        flex-direction: column-reverse;
     }
 }
 
-@media screen and (min-width: 992px) {
-    .portfolio-showcase-wrapper{
-        flex: 0 1 48%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 430px) {
     .name-title{
-        font-size: 4em;
+        font-size: 2em;
     }
     .job-title{
-        font-size: 2.8em;
+        font-size: 1.3em;
     }
     #content_1 p{
-        font-size: 40px; /* 40px */
+        font-size: 1em;
     }
     #content_2 p{
-        font-size: 40px; /* 40px */
+        font-size: 2em;
     }
     #content_3 p.h1{
-        font-size: 2.5em;
+        font-size: 2em;
     }
     #content_3 a p.h4{
-        font-size: 1.5em;
+        font-size: 1.6em;
     }
     .skill-icon{
-        font-size: 3.5em;
+        font-size: 2em;
     }
     .portfolio p.h1{
         font-size: 2em;
     }
     .portfolio-detail{
-        font-size: 1.6em;
+        font-size: 1.2em;
     }
-    .short-text{
-        font-size: 2.5em;
-    }
-    .medium-text{
-        font-size: 2em;
-    }
-    .long-text{
-        font-size: 2em;
-    }
-    .modal-next, .modal-prev{
-        font-size: 4em;
-    }
+
 }

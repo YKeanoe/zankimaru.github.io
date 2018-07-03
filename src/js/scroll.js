@@ -13,7 +13,7 @@ $(function () {
                         animateElem.style.top="0";
                     })
                     .on("leave", function(){
-                        animateElem.style.top="-10vh";
+                        animateElem.style.top="-30vh";
                     })
                     // .addIndicators({name: "swipe down header"}) // add indicators (requires plugin)
                     .addTo(controller));
@@ -49,18 +49,21 @@ $(function () {
     
                     
     // Set onclick event for thumbnails
-    var $id;
+    var $img_id;
     var $img;
     $(document.body).on('click', '.portfolio-showcase-wrapper' ,function(){
-        $id = $(this).closest('.portfolio').find('.port-id').text();
+        $img_id = parseInt($(this).closest('.portfolio').find('.port-id').text());
         $img = $(this).find('.small-showcase').attr('src').split("/")[2];
-        $.get("image.php", { "id": $id, "img": $img }, function(resp) {
+        $.get("image.php", { "id": $img_id, "img": $img }, function(resp) {
             $('#showcase-modal').find('.showcase-big').attr('src', resp.file);
+            clearTextClasses();
             if(resp.title.length > 50){
-                $('#showcase-modal').find('.modal-title').attr('style', "font-size: 1.5rem");
+                $('#showcase-modal').find('.modal-title').addClass("long-text");
             } else if(resp.title.length > 30){
-                $('#showcase-modal').find('.modal-title').attr('style', "font-size: 2rem");
-            } else {/*use h1*/}
+                $('#showcase-modal').find('.modal-title').addClass("medium-text");
+            } else {
+                $('#showcase-modal').find('.modal-title').addClass("short-text");
+            }
             $('#showcase-modal').find('.modal-title').text(resp.title);
         });
         $('#showcase-modal').modal('show');
@@ -68,33 +71,42 @@ $(function () {
 
     // Set onclick event for showcase next and previous button
     $(document.body).on('click', '.modal-button' ,function(){
+        if(isNaN($img_id)){
+            $img_id = parseInt($(this).closest('.portfolio').find('.port-id').text());
+        }
         if($(this).attr('id') == "next-showcase"){
-            $.get("image.php", { "id": $id, "img": $img, "dir": 1 }, function(resp) {
+            $.get("image.php", { "id": $img_id, "img": $img, "dir": 1 }, function(resp) {
                 if(resp == "fail"){
                     alert("whoops!");
                 } else{
                     $('#showcase-modal').find('.showcase-big').attr('src', resp.file);
+                    clearTextClasses();
                     if(resp.title.length > 50){
-                        $('#showcase-modal').find('.modal-title').attr('style', "font-size: 1.5rem");
+                        $('#showcase-modal').find('.modal-title').addClass("long-text");
                     } else if(resp.title.length > 30){
-                        $('#showcase-modal').find('.modal-title').attr('style', "font-size: 2rem");
-                    } else {/*use h1*/}
+                        $('#showcase-modal').find('.modal-title').addClass("medium-text");
+                    } else {
+                        $('#showcase-modal').find('.modal-title').addClass("short-text");
+                    }
                     $('#showcase-modal').find('.modal-title').text(resp.title);
                 }
             }).done(function(){
                 $img = $('#showcase-modal').find('.showcase-big').attr('src').split("/")[2];
             });
         } else{
-            $.get("image.php", { "id": $id, "img": $img, "dir": 0 }, function(resp) {
+            $.get("image.php", { "id": $img_id, "img": $img, "dir": 0 }, function(resp) {
                 if(resp == "fail"){
                     alert("whoops!");
                 } else{
                     $('#showcase-modal').find('.showcase-big').attr('src', resp.file);
+                    clearTextClasses();
                     if(resp.title.length > 50){
-                        $('#showcase-modal').find('.modal-title').attr('style', "font-size: 1.5rem");
+                        $('#showcase-modal').find('.modal-title').addClass("long-text");
                     } else if(resp.title.length > 30){
-                        $('#showcase-modal').find('.modal-title').attr('style', "font-size: 2rem");
-                    } else {/*use h1*/}
+                        $('#showcase-modal').find('.modal-title').addClass("medium-text");
+                    } else {
+                        $('#showcase-modal').find('.modal-title').addClass("short-text");
+                    }
                     $('#showcase-modal').find('.modal-title').text(resp.title);
                 }
             }).done(function(){
@@ -105,35 +117,42 @@ $(function () {
 
     // Set keydown event for showcase next and previous keyboard shortcut
     $(document.body).keydown(function( event ) {
+        if(isNaN($img_id)){
+            $img_id = parseInt($(this).closest('.portfolio').find('.port-id').text());
+        }
         if($('#showcase-modal').hasClass('show')){
             if(event.which == 39){
-                $.get("image.php", { "id": $id, "img": $img, "dir": 1 }, function(resp) {
+                $.get("image.php", { "id": $img_id, "img": $img, "dir": 1 }, function(resp) {
                     if(resp == "fail"){
                         alert("whoops!");
                     } else{
                         $('#showcase-modal').find('.showcase-big').attr('src', resp.file);
+                        clearTextClasses();
                         if(resp.title.length > 50){
-                            $('#showcase-modal').find('.modal-title').attr('style', "font-size: 1.5rem");
+                            $('#showcase-modal').find('.modal-title').addClass("long-text");
                         } else if(resp.title.length > 30){
-                            $('#showcase-modal').find('.modal-title').attr('style', "font-size: 2rem");
-                        } else {/*use h1*/}            
+                            $('#showcase-modal').find('.modal-title').addClass("medium-text");
+                        } else {
+                            $('#showcase-modal').find('.modal-title').addClass("short-text");
+                        }           
                         $('#showcase-modal').find('.modal-title').text(resp.title);
                     }
                 }).done(function(){
                     $img = $('#showcase-modal').find('.showcase-big').attr('src').split("/")[2];
                 });
             } else if(event.which == 37){
-                $.get("image.php", { "id": $id, "img": $img, "dir": 0 }, function(resp) {
+                $.get("image.php", { "id": $img_id, "img": $img, "dir": 0 }, function(resp) {
                     if(resp == "fail"){
                         alert("whoops!");
                     } else{
                         $('#showcase-modal').find('.showcase-big').attr('src', resp.file);
+                        clearTextClasses();
                         if(resp.title.length > 50){
-                            $('#showcase-modal').find('.modal-title').attr('style', "font-size: 1.5rem");
+                            $('#showcase-modal').find('.modal-title').addClass("long-text");
                         } else if(resp.title.length > 30){
-                            $('#showcase-modal').find('.modal-title').attr('style', "font-size: 2rem");
+                            $('#showcase-modal').find('.modal-title').addClass("medium-text");
                         } else {
-                            // use h1
+                            $('#showcase-modal').find('.modal-title').addClass("short-text");
                         }
                         $('#showcase-modal').find('.modal-title').text(resp.title);
                     }
@@ -176,7 +195,7 @@ $(function () {
             scenes.push(new ScrollMagic.Scene({triggerElement: "#trigger_footer"})
                             // trigger animation by adding a css class
                             .on("enter", function(){
-                                animateElem.style.top="-10vh";
+                                animateElem.style.top="-30vh";
                             })
                             .on("leave", function(){
                                 animateElem.style.top="0";
@@ -229,8 +248,8 @@ $(function () {
 
 function makeFooter(){
     $footer = "<div id=\"trigger_footer\" class=\"trigger\"></div>\
-                <div class=\"content dark-content one-third-content animation1 p-5 d-flex align-items-center\" id=\"content_footer\">\
-                    <div class=\"w-100 hide\">\
+                <div class=\"content dark-content one-third-content animation1 d-flex align-items-center\" id=\"content_footer\">\
+                    <div class=\"w-100 my-5 hide\">\
                         <div class=\"row justify-content-center align-items-center\">\
                             <div class=\"col-sm-12 col-md-8\">\
                                 <p class=\"h4 text-center\">\
@@ -259,7 +278,7 @@ function makeFooter(){
                                 </div>\
                             </div>\
                             <div class=\"col-12 justify-content-center d-flex d-md-none\">\
-                                <div class=\"row col-10\">\
+                                <div class=\"row col-12\">\
                                     <a href=\"mailto:keanuraharjo@hotmail.com\" class=\"col-12\">\
                                         <p class=\"h4 text-left\">\
                                             <span class=\"fas fa-envelope-square fa-2x\"></span>&emsp;keanuraharjo@hotmail.com\
@@ -281,4 +300,16 @@ function makeFooter(){
                     </div>\
                 </div>";
     return $footer;
+}
+
+function clearTextClasses(){
+    if($('.modal-title').hasClass('long-text')){
+        $('.modal-title').removeClass('long-text');
+    }
+    if($('.modal-title').hasClass('medium-text')){
+        $('.modal-title').removeClass('medium-text');
+    }
+    if($('.modal-title').hasClass('short-text')){
+        $('.modal-title').removeClass('short-text');
+    }
 }

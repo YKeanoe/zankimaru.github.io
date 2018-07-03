@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=2">
     <!-- Import third-party libraries -->
     <script src="/vendors/jquery/jquery-3.2.1.min.js"></script>        
     <script src="/vendors/popper/popper.min.js"></script>

@@ -26,9 +26,9 @@
                             </th>
                         </tr>
                         <tr class="d-flex">
-                            <th class="col-4"><span class="fa fa-cogs fa-4x skill-icon"></span></th>
-                            <th class="col-4"><span class="fa fa-code fa-4x skill-icon"></span></th>
-                            <th class="col-4"><span class="fa fa-desktop fa-4x skill-icon"></span></th>
+                            <th class="col-4"><span class="fa fa-cogs skill-icon"></span></th>
+                            <th class="col-4"><span class="fa fa-code skill-icon"></span></th>
+                            <th class="col-4"><span class="fa fa-desktop skill-icon"></span></th>
                         </tr>
                         <tr class="d-flex">
                             <td class="col-4"><b>Database and Web Server</b></td>
@@ -75,8 +75,8 @@
 
     <div id="trigger_3" class="trigger"></div>        
 
-    <div class="content dark-content one-third-content animation1 p-5 d-flex align-items-center" id="content_3">
-        <div class="w-100 hide">
+    <div class="content dark-content one-third-content animation1 d-flex align-items-center" id="content_3">
+        <div class="w-100 my-5 hide">
             <div class="row justify-content-center align-items-center">
                 <div class="col-sm-12 col-md-8">
                     <p class="h1 text-center">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="row justify-content-center align-items-center mt-4">
-                <div class="col-8 d-none d-md-block">
+                <div class="col-8 d-none d-lg-block">
                     <div class="row">
                         <a href="mailto:keanuraharjo@hotmail.com" class="col-4">
                             <p class="h4 text-center">
@@ -113,8 +113,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-12 justify-content-center d-flex d-md-none">
-                    <div class="row col-10">
+                <div class="col-12 justify-content-center d-flex d-lg-none">
+                    <div class="row col-md-10 col-sm-12">
                         <a href="mailto:keanuraharjo@hotmail.com" class="col-12">
                             <p class="h4 text-left">
                                 <span class="fas fa-envelope-square fa-2x"></span>&emsp;keanuraharjo@hotmail.com

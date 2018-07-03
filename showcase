@@ -2,21 +2,15 @@
     <div class="modal-dialog showcase-modal" role="document">
         <div class="modal-content showcase-modal-content">
             <div class="modal-header">
-                    <div class="col-10 text-center">
+                    <div class="col-12 text-center">
                         <h1 class="modal-title">Text</h1>
                     </div>
-                    <div class="col-2 h-100 text-center my-auto">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                
             </div>
             <div class="modal-body" style="height: 90%; padding-bottom: 1%;">
                 <div class="row">
                     <div class="col-1">
                         <a id="prev-showcase" class="btn modal-button" href="javascript:void(0);">
-                            <i style="height: 100%;" class="fas fa-4x fa-angle-left"></i>
+                            <i style="height: 100%;" class="fas fa-angle-left modal-prev"></i>
                         </a>
                     </div>
                     <div class="col-10">
@@ -24,7 +18,7 @@
                     </div>
                     <div class="col-1">
                         <a id="next-showcase" class="btn modal-button" href="javascript:void(0);">
-                            <i style="height: 100%;" class="fas fa-4x fa-angle-right"></i>
+                            <i style="height: 100%;" class="fas fa-angle-right modal-next"></i>
                         </a> 
                     </div>
                 </div>

@@ -28,7 +28,7 @@
         $imgs = glob($ports[$i]."/small*");
         $port_imgs .= "<div class=\"portfolio-showcase-wrapper\">
                             <picture>
-                                <source media=\"(min-width: 768px)\" srcset=\"".$imgs[0]."\">
+                                <source media=\"(min-width: 700px)\" srcset=\"".$imgs[0]."\">
                                 <img class=\"small-showcase\" src=\"".$imgs[1]."\"/>
                             </picture>
                         </div>";
@@ -46,18 +46,15 @@
 
     $info = getInfo(file_get_contents($dir."/info"));        
     
-    // TODO
-    // FIX SHOWCASES SIZE
-    
     $order = "<div class=\"col-md-8 col-sm-12\">
                 <div class=\"row port-flex\">
                     <div class=\"col-md-6 col-sm-12 portfolio-showcase\">
                         <div class=\"row\"><div class=\"d-flex align-items-center flex-wrap align-content-center\">".$port_imgs."</div></div>
                     </div>";
     if($id % 2 == 0){
-        $order .= "<div class=\"col-md-6 col-sm-12 my-2 portfolio-detail portfolio-right\">";
+        $order .= "<div class=\"col-md-6 col-sm-12 my-3 portfolio-detail portfolio-right\">";
     } else{
-        $order .= "<div class=\"col-md-6 col-sm-12 my-2 portfolio-detail portfolio-left text-right\">";
+        $order .= "<div class=\"col-md-6 col-sm-12 my-3 portfolio-detail portfolio-left text-right\">";
     }
     if(!empty($link)){
     $order .="Github: <a href=\"" . $link . "\">Link</a>
@@ -82,7 +79,7 @@
                     <div class=\"align-self-center h-100\">
                         <div class=\"row justify-content-center align-items-center mb-3 mt-3\">
                             <div class=\"col-md-8 col-sm-12\">
-                                <p class=\"h1 text-left\">
+                                <p class=\"h1\">
                                     ." . $title . " - " . $year . "
                                 </p>
                             </div>
