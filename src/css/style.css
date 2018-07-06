@@ -10,7 +10,7 @@ body {
 
 @font-face{
     font-family: GeoSansLight;
-    src: url("/style/GeosansLight.ttf")
+    src: url("/src/css/GeosansLight.ttf")
 }
 
 #page-header{
@@ -66,15 +66,11 @@ body {
     /* margin: 30vh 0%;     */
     padding: 5% 0;
 
-  -webkit-animation: slide-left 1s forwards;
-    -webkit-animation-delay: 2s;
     animation: slide-left 1s forwards;
     animation-delay: 1s;
 }
 
-@-webkit-keyframes slide-left {
-    100% { left: 0px; }
-} @keyframes slide-left {
+@keyframes slide-left {
     100% { left: 0px; }
 }
 
@@ -111,16 +107,8 @@ body {
     margin: 0;
 }
 
-/* .content:nth-child(n+3){
-    margin-top: 10vh;
-} */
-
 #content_1 p, #content_2>div{
     opacity: 0;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
 
@@ -142,8 +130,6 @@ body {
 .light-content{
     background: #F6F3EE;
     /* background: linear-gradient(to right, rgba(246, 243, 238, 1), rgba(246, 243, 238, 0)); */
-    background: -moz-linear-gradient(left, rgba(246,243,238,0.5) 0%, rgba(246,243,238,1) 20%, rgba(246,243,238,1) 80%, rgba(246,243,238,0.5) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(246,243,238,0.5) 0%,rgba(246,243,238,1) 20%,rgba(246,243,238,1) 80%,rgba(246,243,238,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, rgba(246,243,238,0.5) 0%,rgba(246,243,238,1) 20%,rgba(246,243,238,1) 80%,rgba(246,243,238,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -173,9 +159,6 @@ body {
 .darker-content{
     color: white;
     background: rgba(51,51,51,0.8);
-    /* background: -moz-linear-gradient(left, rgba(51,51,51,0.6) 0%, rgba(51,51,51,1) 15%, rgba(51,51,51,1) 85%, rgba(51,51,51,0.6) 100%); FF3.6-15 */
-    /* background: -webkit-linear-gradient(left, rgba(51,51,51,0.6) 0%,rgba(51,51,51,1) 15%,rgba(51,51,51,1) 85%,rgba(51,51,51,0.6) 100%); Chrome10-25,Safari5.1-6 */
-    /* background: linear-gradient(to right, rgba(51,51,51,0.6) 0%,rgba(51,51,51,1) 15%,rgba(51,51,51,1) 85%,rgba(51,51,51,0.6) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
   
 .full-content{
@@ -240,12 +223,6 @@ body {
 .portfolio > div > div:last-child{
     height: fit-content;
 }
-/* 
-.portfolio > div > div:last-child > *,
-.portfolio > div > div:last-child > * > *,
-.portfolio > div > div:last-child > * > * > *{
-    height: 100%;
-} */
 
 .portfolio-showcase > *{
     min-height: 100%;
@@ -292,10 +269,6 @@ body {
 
 .hide{
     opacity: 0;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
 
@@ -385,18 +358,9 @@ body {
     font-size: 1.2em;
 }
 
-.portfolio{
-    /* padding: 10vh 0; */
-}
-
 .portfolio-left{
     left: -10vw;
     opacity: 0;
-
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
 
@@ -405,41 +369,26 @@ body {
 }
 
 .swipe-left{
-    -webkit-animation: slide-left-appear 1s forwards;
-    /* -webkit-animation-delay: 2s; */
     animation: slide-left-appear 1s forwards;
-    /* animation-delay: 2s; */
     opacity: 1;
 }
 
-@-webkit-keyframes slide-left-appear {
-100% { left: 0;}
-} @keyframes slide-left-appear {
+@keyframes slide-left-appear {
 100% { left: 0; }
 }
 
 .portfolio-right{
     left: 10vw;
     opacity: 0;
-
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
 }
 
 .swipe-right{
-    -webkit-animation: slide-right-appear 1s forwards;
-    /* -webkit-animation-delay: 2s; */
     animation: slide-right-appear 1s forwards;
-    /* animation-delay: 2s; */
     opacity: 1;
 }
 
-@-webkit-keyframes slide-right-appear {
-100% { left: 0;}
-} @keyframes slide-right-appear {
+@keyframes slide-right-appear {
 100% { left: 0; }
 }
 
@@ -458,28 +407,18 @@ body {
 }
 
 .swipe-down{
-    -webkit-animation: slide-down-appear 1s forwards;
-    /* -webkit-animation-delay: 2s; */
     animation: slide-down-appear 1s forwards;
-    /* animation-delay: 2s; */
 }
 
-@-webkit-keyframes slide-down-appear {
-100% { top: 0;}
-} @keyframes slide-down-appear {
+@keyframes slide-down-appear {
 100% { top: 0; }
 }
 
 .swipe-up{
-    -webkit-animation: slide-up-appear 1s forwards;
-    /* -webkit-animation-delay: 2s; */
     animation: slide-up-appear 1s forwards;
-    /* animation-delay: 2s; */
 }
 
-@-webkit-keyframes slide-up-appear {
-100% { top: -10vh;}
-} @keyframes slide-up-appear {
+@keyframes slide-up-appear {
 100% { top: -10vh; }
 }
 
@@ -506,23 +445,6 @@ a:hover{
     /* background:red; */
     display: flex;
     align-items: center;
-}
-
-
-
-
-
-.filler{
-    height: 30%;
-    width: inherit;
-}
-
-.fixed{
-    height: 100px;
-}
-
-.between-content{
-    height: 100px;
 }
 
 .trigger{
@@ -563,14 +485,11 @@ a:hover{
 .anim-long-slow{
     stroke-dasharray: 5 1000;
     animation: dash-long-s 8s linear infinite;
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 .anim-long-slow-2{
     stroke-dasharray: 5 2000;
-    /* stroke-dashoffset: -00; */
     animation: dash-long-s-2 10s linear infinite;
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 .anim-long-sync{
@@ -579,26 +498,22 @@ a:hover{
     animation-duration: 8s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 
 .anim-long-fast{
     stroke-dasharray: 5 1000;
     animation: dash-long-f 3s linear infinite;
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 .anim-short-slow{
     stroke-dasharray: 5 1000;
     animation: dash-short-s 9s linear infinite;
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 .anim-short-fast{
     stroke-dasharray: 5 600;
     animation: dash-short-f 3s linear infinite;
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 @keyframes dash-short-f {
@@ -620,14 +535,11 @@ a:hover{
     to {stroke-dashoffset: 1200;}
 }
 
-
 .anim-glow{
     opacity: 0;
     fill: white;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    /* animation: glow-1 3s ease-in-out infinite; */
-    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 .glow-1{
