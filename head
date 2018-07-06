@@ -8,7 +8,6 @@
     <script src="vendors/angularjs-1.6.6/angular.min.js"></script>        
     <script src="vendors/angularjs-1.6.6/angular-route.min.js"></script>        
     <script src="vendors/angularjs-1.6.6/angular-resource.min.js"></script>        
-    <script src="vendors/ifvisible.js/ifvisible.min.js"></script>
     <script src="vendors/infinite-scroll/infinite-scroll.pkgd.min.js"></script>
     <script defer src="vendors/fontawesome-5.0.4/js/fontawesome-all.js"></script>
 

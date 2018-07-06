@@ -10,7 +10,7 @@ body {
 
 @font-face{
     font-family: GeoSansLight;
-    src: url("/src/css/GeosansLight.ttf")
+    src: url("/src/fonts/GeosansLight.ttf")
 }
 
 #page-header{
@@ -206,6 +206,7 @@ body {
 
 
 .portfolio{
+    color: #111;
     opacity: 1;
     background: rgba(136, 136, 124, 0.5);
 }
