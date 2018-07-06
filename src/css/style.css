@@ -560,38 +560,134 @@ a:hover{
 	stroke:#fff;
 }
 
-.anim-1{
+.anim-long-slow{
     stroke-dasharray: 5 1000;
-    animation: dash-1 8s linear infinite;
+    animation: dash-long-s 8s linear infinite;
     /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
-.anim-2{
-    stroke-dasharray: 5 1100;
-    animation: dash-2 14s linear infinite;
-	/* filter: url(#white-glow); */
+.anim-long-slow-2{
+    stroke-dasharray: 5 2000;
+    /* stroke-dashoffset: -00; */
+    animation: dash-long-s-2 10s linear infinite;
+    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
-.anim-3{
-    stroke-dasharray: 5 1000;
-    animation: dash-3 3s linear infinite;
-	/* filter: url(#white-glow); */
-    transform: translateZ(0);
-}
-.anim-4{
-    stroke-dasharray: 5 1000;
-	animation: dash-1 6s linear infinite;
-	/* filter: url(#white-glow); */
+.anim-long-sync{
+    stroke-dasharray: 5 1200;
+    animation-name: dash-sync;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* filter: url(#white-glow); */
     transform: translateZ(0);
 }
 
-@keyframes dash-1 {
-	to {stroke-dashoffset: -900;}
-}@keyframes dash-2 {
-	to {stroke-dashoffset: 1100;}
-}@keyframes dash-3 {
-	to {stroke-dashoffset: -500;}
+.anim-long-fast{
+    stroke-dasharray: 5 1000;
+    animation: dash-long-f 3s linear infinite;
+    /* filter: url(#white-glow); */
+    transform: translateZ(0);
 }
+.anim-short-slow{
+    stroke-dasharray: 5 1000;
+    animation: dash-short-s 9s linear infinite;
+    /* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+.anim-short-fast{
+    stroke-dasharray: 5 600;
+    animation: dash-short-f 3s linear infinite;
+    /* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+@keyframes dash-short-f {
+	to {stroke-dashoffset: 600;}
+}
+@keyframes dash-short-s {
+	to {stroke-dashoffset: -900;}
+}
+@keyframes dash-long-f {
+	to {stroke-dashoffset: -900;}
+}
+@keyframes dash-long-s {
+	to {stroke-dashoffset: -900;}
+}
+@keyframes dash-long-s-2 {
+	to {stroke-dashoffset: -1000;}
+}
+@keyframes dash-sync {
+    to {stroke-dashoffset: 1200;}
+}
+
+
+.anim-glow{
+    opacity: 0;
+    fill: white;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation: glow-1 3s ease-in-out infinite; */
+    /* filter: url(#white-glow); */
+    transform: translateZ(0);
+}
+.glow-1{
+    animation-name: glow-1;
+    animation-duration: 3s;
+}
+.glow-2{
+    animation-name: glow-1;
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+.glow-3{
+    animation-name: glow-1;
+    animation-delay: 7s;
+    animation-duration: 3s;
+}
+.glow-4{
+    animation-name: glow-1;
+    animation-delay: 10s;
+    animation-duration: 4s;
+}
+.glow-5{
+    animation-name: glow-1;
+    animation-delay: 11s;
+    animation-duration: 3s;
+}
+.glow-6{
+    animation-name: glow-1;
+    animation-delay: 14s;
+    animation-duration: 4s;
+}
+.glow-7{
+    animation-name: glow-1;
+    animation-delay: 15s;
+    animation-duration: 3s;
+}
+@keyframes glow-1 {
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 0.8;
+    }
+    3% {
+        opacity: 1;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    7% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 .portfolio .port-flex{
     flex-direction: column-reverse;
@@ -669,6 +765,9 @@ a:hover{
     #content_3 a p.h4{
         font-size: 1.5em;
     }
+    #content_footer p.h4{
+        font-size: 1.5em;
+    }
     .skill-icon{
         font-size: 3.5em;
     }
@@ -690,4 +789,24 @@ a:hover{
     .modal-next, .modal-prev{
         font-size: 4em;
     }
+}
+
+@media screen and (min-width: 1981px) {
+    #content_1 > div >.col-md-8,
+    #content_3 > div > div > .col-8, 
+    #content_3 > div > div > .col-md-8, 
+    #header-link > div > .col-md-8, 
+    #content_footer > div > div > .col-8,
+    #content_footer > div > div > .col-md-8,
+    .portfolio > div > div > div > .col-md-8{
+        flex: none;
+        max-width: none;
+        width: 1320px;
+    }
+    #content_2 > div >.col-md-6{
+        flex: none;
+        max-width: none;
+        width: 990px;
+    }
+
 }

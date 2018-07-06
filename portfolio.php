@@ -74,7 +74,7 @@
     $order .= "</div></div></div>";
 
     $div = "<div class=\"content portfolio full-content animation1 align-items-center d-flex\" id=\"content_".$page_id."\">
-                <div class=\"my-auto\">
+                <div class=\"my-auto w-100\">
                     <div class=\"hidden port-id\">" . $id . "</div>
                     <div class=\"align-self-center h-100\">
                         <div class=\"row justify-content-center align-items-center mb-3 mt-3\">
