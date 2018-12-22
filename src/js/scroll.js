@@ -248,7 +248,7 @@ $(function () {
 
 function makeFooter(){
     $footer = "<div id=\"trigger_footer\" class=\"trigger\"></div>\
-                <div class=\"content dark-content one-third-content animation1 d-flex align-items-center\" id=\"content_footer\">\
+                <div class=\"content darker-content one-third-content animation1 d-flex align-items-center\" id=\"content_footer\">\
                     <div class=\"w-100 my-5 hide\">\
                         <div class=\"row justify-content-center align-items-center\">\
                             <div class=\"col-sm-12 col-md-8\">\
