@@ -1,1 +1,0 @@
-Second year project for RMIT Software Architecture Design and Implementation. In this project, we are required to develop a multiplayer application for craps game. Using threads and socket, the application is able to connect more than one instances of clients and each clients are able to add themself into the game and play.

@@ -1,4 +1,0 @@
-Second year project for RMIT Algorithm and Analysis. The project is to implement maze generation and solver algorithm.
-The project has 3 types of mazes:<ul><li>Normal maze</li><li>Hexagon maze</li><li>Tunnel maze</li></ul>
-The project has 3 maze generator algorithm:<ul><li>Kruskal's Algorithm</li><li>Prim's Algorithm</li><li>Recursive Backtracking Algorithm</li></ul>
-The project has 3 maze solver algorithm:<ul><li>Recursive Backtracking Algorithm</li><li>Bidirectional Breadth-First-Search Algorithm.</li></ul>

@@ -1,0 +1,22 @@
+[
+    {
+        "type": "design",
+        "url": "/assets/data/showcases-saung-cafe.jpg"
+    },
+    {
+        "type": "render",
+        "url": "/assets/data/showcases-section-light-soho.png"
+    },
+    {
+        "type": "render",
+        "url": "/assets/data/showcases-section-shifted-house.png"
+    },
+    {
+        "type": "render",
+        "url": "/assets/data/showcases-villa-berawa.jpg"
+    },
+    {
+        "type": "render",
+        "url": "/assets/data/showcases-botos-render.jpg"
+    }
+]

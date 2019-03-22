@@ -1,0 +1,6 @@
+Project
+	- tag (arch/interior)
+	- title
+	- images : ( ((arch or interior)/2) - 1 < showcases <= (arch or interior)/2 )
+		- main images (>0) && main images >= add img / 2
+		- additional images(>0)
